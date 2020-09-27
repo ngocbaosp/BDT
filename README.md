@@ -1,7 +1,12 @@
 # Big Data Technology Course - Final Project
 ## Presentation file: 
  - https://github.com/ngocbaosp/BDT/blob/master/BDT%20Final%20Project%20Presentation.pptx
-
+ 
+## Data source (Restful API): 
+ - ***IEX Cloude***: a platform that makes financial data and services accessible to everyone
+ - IEX Cloude website: https://iexcloud.io/ 
+ - IEX Cloude API doc: https://iexcloud.io/docs/api/
+ - Test link (to see Json data): https://sandbox.iexapis.com/stable/stock/AAPL/quote?token=Tsk_2ec682f2ca234a04bb108023943ea5e8  
 ## Project Folder Structure
 - **FinalProject**: contains all Java source codes in this solution (created from scratch)
   - *** 
