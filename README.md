@@ -45,6 +45,16 @@
        | 4   | hdfs path | hdfs folder related to hive table| /user/hive/BDT/StockDaily    |
      
     - ****comsumer.jar****: this is a sample consumer app, get data from Kafka topic and write to console window.
+      - **Shell command**:
+      ```
+      java -jar '/home/cloudera/workspace/FinalProject/RunnableJarFiles/consumer.jar' AAPLTest
+      ```
+      - **Arguments**: 
+
+
+       | No       | Arg     | Description     | Sample value     |
+       | :------------- | :----------: | -----------: | -----------: |
+       |  1 | Topic Name   | Kafka topic name    | StockTest    |
     
  
 - Documentation: contains some related documents, such as: 
