@@ -88,7 +88,7 @@
 
 
 ## 5. Hive
-### 5.1 Kafka Commands
+### 5.1 Hive Commands
 - Create stockDaily table:
   ```
    CREATE EXTERNAL TABLE StockDaily
@@ -127,11 +127,24 @@
    LINES TERMINATED BY '\n'
    LOCATION '/user/hive/BDT/StockDaily';
   ```
-- Delete topic:
+- Create table partitions:
   ```
-  kafka-topics --zookeeper quickstart.cloudera:2181 --topic ***topicname*** --delete
-  ```
+  LOAD DATA INPATH
+  '/user/cloudera/BDT/FinalProject/Stock/AAPLSampleData.txt'
+  INTO TABLE stockdaily
+  PARTITION (symbol='AAPL');
 
+  LOAD DATA INPATH
+  '/user/cloudera/BDT/FinalProject/Stock/GOOGLSampleData.txt'
+  INTO TABLE stockdaily
+  PARTITION (symbol='GOOGL');
+
+  LOAD DATA INPATH
+  '/user/cloudera/BDT/FinalProject/Stock/MSFTSampleData.txt'
+  INTO TABLE stockdaily
+  PARTITION (symbol='MSFT');
+
+```
 
 ## 6. Power BI
  - Download and install PowerBI Desktop: https://powerbi.microsoft.com/en-us/downloads/
