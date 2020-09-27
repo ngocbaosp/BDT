@@ -8,5 +8,5 @@
 - Delete topic:
   - kafka-topics --zookeeper quickstart.cloudera:2181 --topic ***topicname*** --delete
 ### Install Kafka 
-- Quick guide: 
+- Quick guide: https://github.com/ngocbaosp/BDT/blob/master/Documentation/Install%20Kafka.pptx
 - Ref: https://blog.clairvoyantsoft.com/installing-apache-kafka-on-clouderas-quickstart-vm-8245d8d0ebe5
