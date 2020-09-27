@@ -150,4 +150,8 @@
 ## 6. Power BI
  - Download and install PowerBI Desktop: https://powerbi.microsoft.com/en-us/downloads/
 
-## 7. Other useful references
+### 7. Maven Repositories (using in this project)
+ - Kafka Client: https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients
+ - Sparkstreaming: https://mvnrepository.com/artifact/org.apache.spark/spark-streaming
+## 8. Other useful references
+
