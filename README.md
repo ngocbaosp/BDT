@@ -30,7 +30,7 @@
 
        | No       | Arg     | Description     | Sample value     |
        | :------------- | :----------: | -----------: | -----------: |
-       |  1 | Topic Name   | Kafka topic name    | StockTest    |
+       |  1 | Topic Name   | Kafka topic name    | AAPLTest    |
        | 2   | Symbol | Stock ticker/symbol | AAPL: Apple Inc, GOOGL: Google Inc    |
        | 3   | Duration | Timer Duration (seconds)| 5    |
        | 4   | token | IEX API token| Bao's token    |
@@ -48,7 +48,7 @@
 
        | No       | Arg     | Description     | Sample value     |
        | :------------- | :----------: | -----------: | -----------: |
-       |  1 | Topic Name   | Kafka topic name    | StockTest    |
+       |  1 | Topic Name   | Kafka topic name    | AAPLTest    |
        | 2   | Symbol | Stock ticker/symbol | AAPL: Apple Inc, GOOGL: Google Inc    |
        | 3   | Duration | Timer Duration (seconds)| 10    |
        | 4   | hdfs path | hdfs folder related to hive table| /user/hive/BDT/StockDaily    |
