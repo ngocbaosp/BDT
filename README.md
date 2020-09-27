@@ -10,7 +10,7 @@
 ## 3. Project Folder Structure
 - **[FinalProject](https://github.com/ngocbaosp/BDT/tree/master/FinalProject)**: contains all Java source codes in this solution (created from scratch)
   - *** 
-  - ***RunnableJarFiles***:
+  - ***[RunnableJarFiles](https://github.com/ngocbaosp/BDT/tree/master/FinalProject/RunnableJarFiles)***:
     - ****producer.jar****: get data from RESTAPI (https://iexcloud.io/docs/api/), convert Json data to Java object, and send StockInfo object to Kafka topic
       - **Shell command**:
       ```
