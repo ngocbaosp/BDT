@@ -2,6 +2,8 @@
 ## Presentation file: 
  - https://github.com/ngocbaosp/BDT/blob/master/BDT%20Final%20Project%20Presentation.pptx
 
+## Project Folder Structure
+- FinalProject: contains all Java source codes in this solution (created from scratch)
 
 
 ## Kafka
@@ -13,3 +15,8 @@
 ### Install Kafka 
 - Quick guide: https://github.com/ngocbaosp/BDT/blob/master/Documentation/Install%20Kafka.pptx
 - Ref: https://blog.clairvoyantsoft.com/installing-apache-kafka-on-clouderas-quickstart-vm-8245d8d0ebe5
+
+
+## Power BI
+
+## Other useful references
