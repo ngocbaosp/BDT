@@ -6,12 +6,16 @@
  - ***IEX Cloude***: a platform that makes financial data and services accessible to everyone
  - IEX Cloude website: https://iexcloud.io/ 
  - IEX Cloude API doc: https://iexcloud.io/docs/api/
- - Test link (to see Json data): https://sandbox.iexapis.com/stable/stock/AAPL/quote?token=Tsk_2ec682f2ca234a04bb108023943ea5e8  
+ - Test link (to view Json data): https://sandbox.iexapis.com/stable/stock/AAPL/quote?token=Tsk_2ec682f2ca234a04bb108023943ea5e8  
 ## Project Folder Structure
 - **FinalProject**: contains all Java source codes in this solution (created from scratch)
   - *** 
   - ***RunnableJarFiles***:
     - ****producer.jar****: get data from RESTAPI (https://iexcloud.io/docs/api/), convert Json data to Java object, and send StockInfo object to Kafka topic
+     - Args 
+    No | Param Name | Description | Default value
+    --- | --- |---| ---|
+    1 | Topic Name | Kafka topic name | Stocktest|
     - ****stockSparkStreaming.jar****: 
      get data from Kafka topic, tranform the StockInfo object to the StockInfoDTO object (only fields related to StockDaily table in Hive) and save DStream directly to HDFS partition folder (underneath user/hive folder)   
     - ****comsumer.jar****: this is a sample consumer app, get data from Kafka topic and write to console window.
