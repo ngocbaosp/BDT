@@ -18,9 +18,9 @@
     
  
 - Documentation: contains some related documents, such as: 
- - Install Kafka.pptx: how to install Kafka on Cloudera quickstart VM  
- - Hive and PowerBI.pptx: install hive odbc connection for Power BI 
- - PowerBI: contains sample file created for this project that pulled data directly from Hive 
+  - Install Kafka.pptx: how to install Kafka on Cloudera quickstart VM  
+  - Hive and PowerBI.pptx: install hive odbc connection for Power BI 
+  - PowerBI: contains sample file created for this project that pulled data directly from Hive 
 - Readme.md
 
 
