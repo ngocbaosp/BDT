@@ -11,13 +11,13 @@
 - **[FinalProject](https://github.com/ngocbaosp/BDT/tree/master/FinalProject)**: contains all Java source codes in this solution (created from scratch)
   - ***[src/main/java/cs523/finalproject/](https://github.com/ngocbaosp/BDT/tree/master/FinalProject/src/main/java/cs523/finalproject)***: java classes 
    - **Kafka**:
-    - StockProducer.java: a producer to send StockInfo object to Kafka topic    
-    - StockConsumer.java: a consumer to receive StockInfo object from Kafka topic
-    - SendStockRecordToKafkaTopic.java: get data from Restful API, convert Json object to Java POJO object, then send a stockInfo record to kafka topic
-    - Service: classes related to get data from Rest API
-    - model: POJO classes
+     - StockProducer.java: a producer to send StockInfo object to Kafka topic    
+     - StockConsumer.java: a consumer to receive StockInfo object from Kafka topic
+     - SendStockRecordToKafkaTopic.java: get data from Restful API, convert Json object to Java POJO object, then send a stockInfo record to kafka topic
+     - Service: classes related to get data from Rest API
+     - model: POJO classes
    - **Spark**:
-    - StockSparkStreaming.java: get data from Kafka topic, tranform the StockInfo object to the StockInfoDTO object (only fields related to StockDaily table in Hive) and save DStream directly to HDFS partition folder (underneath user/hive folder)
+     - StockSparkStreaming.java: get data from Kafka topic, tranform the StockInfo object to the StockInfoDTO object (only fields related to StockDaily table in Hive) and save DStream directly to HDFS partition folder (underneath user/hive folder)
     
   - ***[RunnableJarFiles](https://github.com/ngocbaosp/BDT/tree/master/FinalProject/RunnableJarFiles)***:
     - ****producer.jar****: get data from RESTAPI (https://iexcloud.io/docs/api/), convert Json data to Java object, and send StockInfo object to Kafka topic
