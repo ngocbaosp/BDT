@@ -3,7 +3,12 @@
  - https://github.com/ngocbaosp/BDT/blob/master/BDT%20Final%20Project%20Presentation.pptx
 
 ## Project Folder Structure
-- FinalProject: contains all Java source codes in this solution (created from scratch)
+- **FinalProject**: contains all Java source codes in this solution (created from scratch)
+- Documentation: contains some related documents, such as: 
+ - Install Kafka.pptx: how to install Kafka on Cloudera quickstart VM  
+ - Hive and PowerBI.pptx: install hive odbc connection for Power BI 
+ - PowerBI: contains sample file created for this project that pulled data directly from Hive 
+- Readme.md
 
 
 ## Kafka
