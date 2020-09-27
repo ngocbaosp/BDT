@@ -36,5 +36,6 @@
 
 
 ## Power BI
+ - Download and install PowerBI Desktop: https://powerbi.microsoft.com/en-us/downloads/
 
 ## Other useful references
