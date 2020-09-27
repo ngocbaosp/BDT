@@ -146,6 +146,9 @@
 
   ```
 ### 5.2 Hive ODBC for Reporting and PowerBI
+ - Configuring, install and connect Hive table using ODBC 
+ - https://towardsdatascience.com/connecting-apache-hive-to-microsoft-power-bi-d460e2278720
+ - https://github.com/ngocbaosp/BDT/blob/master/Documentation/Hive%20and%20PowerBI.pptx
 
 ## 6. Power BI
  - Download and install PowerBI Desktop: https://powerbi.microsoft.com/en-us/downloads/
