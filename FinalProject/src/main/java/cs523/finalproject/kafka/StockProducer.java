@@ -86,14 +86,14 @@ public class StockProducer {
 	      StockRESTApi api = new StockRESTApi();
 		  StockRecord sr = api.GetStockRecord(restURL);
 			
-		  System.out.println(sr);	 	      
+		  //System.out.println(sr);	 	      
 
-	      
+	      /*
 	      ProducerRecord producerRecord = new ProducerRecord<>(topicName, sr.getKey(), sr.getValue());
 	      producer.send(producerRecord);
-	      
+	      */
 	 	      
-	 	  System.out.println("Message sent successfully");
+	 	  //System.out.println("Message sent successfully");
 	 	              
 	 	  
 	 	 //Call RestAPI to get StockInfo 

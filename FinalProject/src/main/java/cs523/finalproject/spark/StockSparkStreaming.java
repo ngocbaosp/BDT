@@ -40,6 +40,9 @@ public class StockSparkStreaming
 		    String topics = "stocktest02";//args[2];
 		    String ticker = "APPL";
 		    String hiveFolder = "/user/hive/BDT/StockDailyTest";
+		    int duration = 30;//10 seconds by default
+			 int b = 1;
+			 
 		    
 		    if (args.length>=1)
 		    	topics = args[0].toString();      
@@ -47,8 +50,11 @@ public class StockSparkStreaming
 		    if (args.length>=2)
 		    	ticker = args[1].toString();      
 
-		    if (args.length>=3)
-		    	hiveFolder = args[2].toString();      
+		    if (args.length >=3)
+		    	  duration = Integer.parseInt(args[2].toString());	     
+
+		    if (args.length>=4)
+		    	hiveFolder = args[3].toString();      
 		    
 		    String hiveHDFSFolder = hdfsURL+hiveFolder+"/symbol="+ticker+"/loadTime=";
 
@@ -58,13 +64,13 @@ public class StockSparkStreaming
 
 		    sparkConf.hadoopConfiguration().set("mapreduce.fileoutputcommitter.marksuccessfuljobs", "false");
 		    
-		    JavaStreamingContext jssc = new JavaStreamingContext(sparkConf, Durations.seconds(10));
+		    JavaStreamingContext jssc = new JavaStreamingContext(sparkConf, Durations.seconds(duration));
 
 		    Set<String> topicsSet = new HashSet<>(Arrays.asList(topics.split(",")));
 		    Map<String, Object> kafkaParams = new HashMap<>();
 		    kafkaParams.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, brokers);
 		    kafkaParams.put(ConsumerConfig.GROUP_ID_CONFIG, groupId);
-		    kafkaParams.put("auto.offset.reset", "earliest");
+		    kafkaParams.put("auto.offset.reset", "latest");
 		    kafkaParams.put("enable.auto.commit", "true");
 		    kafkaParams.put("auto.commit.interval.ms", "1000");
 		    kafkaParams.put("session.timeout.ms", "30000");
@@ -98,21 +104,25 @@ public class StockSparkStreaming
 		 
 		 Timestamp ts = new Timestamp(System.currentTimeMillis());
 		 Long t = ts.getTime();
+		 
+		
+		 result.foreachRDD(ds -> { 
 
-		result.foreachRDD(ds -> { if (!ds.isEmpty()) { 
-			
-			Long tt = t+ds.first()._1;
-			String fileName = tt.toString();
-			
-			String dir = hdfsPath+fileName;
-			
-			ds.saveAsHadoopFile(dir, Long.class, StockInfo.class, TextOutputFormat.class);
+				if (!ds.isEmpty()) { 
+				
+					Long tt = t+ds.first()._1;
+					String fileName = tt.toString();
+					
+					String dir = hdfsPath+fileName;
+					
+					ds.saveAsHadoopFile(dir, Long.class, StockInfo.class, TextOutputFormat.class);
+		
+				 	fs.rename(new Path(dir+"/part-00000"), new Path (dir+".txt"));
+				 		
+				 	fs.delete(new Path (dir), false);
 
-		 		fs.rename(new Path(dir+"/part-00000"), new Path (dir+".txt"));
-		 		
-		 		fs.delete(new Path (dir), false);
-			}
-		 });
+				}
+			 });
 
 		// Start the computation
 		 jssc.start();
