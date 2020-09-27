@@ -145,6 +145,7 @@
   PARTITION (symbol='MSFT');
 
   ```
+### 5.2 Hive ODBC for Reporting and PowerBI
 
 ## 6. Power BI
  - Download and install PowerBI Desktop: https://powerbi.microsoft.com/en-us/downloads/
