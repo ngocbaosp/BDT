@@ -10,13 +10,13 @@
 ## 3. Project Folder Structure
 - **[FinalProject](https://github.com/ngocbaosp/BDT/tree/master/FinalProject)**: folder contains all Java source codes in this solution (created from scratch)
   - ***[src/main/java/cs523/finalproject/](https://github.com/ngocbaosp/BDT/tree/master/FinalProject/src/main/java/cs523/finalproject)***: folder contains java classes 
-   - **Kafka**: folder
+   - **[Kafka](https://github.com/ngocbaosp/BDT/tree/master/FinalProject/src/main/java/cs523/finalproject/kafka)**: folder
      - ***StockProducer.java***: producer class to send StockInfo object to Kafka topic    
      - ***StockConsumer.java***: consumer class to receive StockInfo object from Kafka topic
      - ***SendStockRecordToKafkaTopic.java***: get data from Restful API, convert Json object to Java POJO object, then send a stockInfo record to kafka topic
      - ***Service***: folder contains related classes to get data from Rest API
      - ***model***: folder contains POJO classes
-   - **Spark**: folder
+   - **[Spark](https://github.com/ngocbaosp/BDT/tree/master/FinalProject/src/main/java/cs523/finalproject/Spark)**: folder
      - ***StockSparkStreaming.java***: get data from Kafka topic, tranform the StockInfo object to the StockInfoDTO object (only fields related to StockDaily table in Hive) and save DStream directly to HDFS partition folder (underneath user/hive folder)
     
   - ***[RunnableJarFiles](https://github.com/ngocbaosp/BDT/tree/master/FinalProject/RunnableJarFiles)***:
