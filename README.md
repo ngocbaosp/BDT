@@ -75,15 +75,62 @@
 ## 4. Kafka
 ### 4.1 Kafka Commands
 - Create topic:
-  - kafka-topics --zookeeper quickstart.cloudera:2181 --create --topic ***topicname*** --partitions 1 --replication-factor 1
+  ```
+  kafka-topics --zookeeper quickstart.cloudera:2181 --create --topic ***topicname*** --partitions 1 --replication-factor 1
+  ```
 - Delete topic:
-  - kafka-topics --zookeeper quickstart.cloudera:2181 --topic ***topicname*** --delete
+  ```
+  kafka-topics --zookeeper quickstart.cloudera:2181 --topic ***topicname*** --delete
+  ```
 ### 4.2 Install Kafka 
 - Quick guide: https://github.com/ngocbaosp/BDT/blob/master/Documentation/Install%20Kafka.pptx
 - Ref: https://blog.clairvoyantsoft.com/installing-apache-kafka-on-clouderas-quickstart-vm-8245d8d0ebe5
 
 
 ## 5. Hive
+### 5.1 Kafka Commands
+- Create stockDaily table:
+  ```
+  --drop table StockDaily;
+
+CREATE EXTERNAL TABLE StockDaily
+(
+    Id STRING,
+    companyName STRING,
+    primaryExchange STRING,
+    openPrice FLOAT,
+    openTime BIGINT,
+    closePrice FLOAT,
+    closeTime BIGINT,
+    highPrice FLOAT,
+    highTime BIGINT,
+    lowPrice FLOAT,
+    lowTime BIGINT,
+    latestPrice FLOAT,
+    latestUpdate BIGINT,
+    receiveDate STRING,
+    latestVolume FLOAT,
+    previousClosePrice FLOAT,
+    previousVolume FLOAT,
+    change FLOAT,
+    changePercent FLOAT,
+    volume FLOAT,
+    avgTotalVolume FLOAT,
+    marketCap FLOAT,
+    peRatio FLOAT,
+    week52High FLOAT,
+    week52Low FLOAT,
+    ytdChange FLOAT,
+    lastTradeTime BIGINT   
+)
+PARTITIONED BY (symbol STRING)
+ROW FORMAT DELIMITED
+   FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+LOCATION '/user/hive/BDT/StockDaily';
+  ```
+- Delete topic:
+  ```kafka-topics --zookeeper quickstart.cloudera:2181 --topic ***topicname*** --delete```
 
 
 ## 6. Power BI
