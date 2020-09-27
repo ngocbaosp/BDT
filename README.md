@@ -1,4 +1,6 @@
-# Big Data Technology Course
+# Big Data Technology Course - Final Project
+## Presentation file: https://github.com/ngocbaosp/BDT/blob/master/BDT%20Final%20Project%20Presentation.pptx
+
 
 
 ## Kafka
