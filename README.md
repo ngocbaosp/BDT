@@ -155,4 +155,4 @@
  - Sparkstreaming: https://mvnrepository.com/artifact/org.apache.spark/spark-streaming
  - SparkStreamingKafka: https://mvnrepository.com/artifact/org.apache.spark/spark-streaming-kafka-0-10_2.12/3.0.1
 ## 8. Other useful references
-
+- https://spark.apache.org/docs/latest/streaming-kafka-0-10-integration.html
