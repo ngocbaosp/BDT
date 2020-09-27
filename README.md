@@ -66,7 +66,7 @@
        |  1 | Topic Name   | Kafka topic name    | StockTest    |
     
  
-- Documentation: contains some related documents, such as: 
+- [Documentation](https://github.com/ngocbaosp/BDT/tree/master/Documentation): contains some related documents, such as: 
   - Install Kafka.pptx: how to install Kafka on Cloudera quickstart VM  
   - Hive and PowerBI.pptx: install hive odbc connection for Power BI 
   - PowerBI: contains sample file created for this project that pulled data directly from Hive 
