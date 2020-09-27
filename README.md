@@ -8,8 +8,8 @@
   - ***RunnableJarFiles***:
     - ****producer.jar****: get data from RESTAPI and send StockInfo object to Kafka topic
     - ****stockSparkStreaming.jar****: 
-     get data from Kafka topic, tranform StockInfo object to StockInfoDTO (only fields related to StockDaily table in Hive)  
-    - **** comsumer.jar****: this is a sample consumer app, get data from Kafka topic and write to console window.
+     get data from Kafka topic, tranform the StockInfo object to the StockInfoDTO object (only fields related to StockDaily table in Hive) and save DStream directly to HDFS partition folder (underneath user/hive folder)   
+    - ****comsumer.jar****: this is a sample consumer app, get data from Kafka topic and write to console window.
     
  
 - Documentation: contains some related documents, such as: 
