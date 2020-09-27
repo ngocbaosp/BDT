@@ -1,13 +1,13 @@
 # Big Data Technology Course - Final Project
-## Presentation file: 
+## 1. Presentation file: 
  - https://github.com/ngocbaosp/BDT/blob/master/BDT%20Final%20Project%20Presentation.pptx
  
-## Data source (Restful API): 
+## 2. Data source (Restful API): 
  - ***IEX Cloude***: a platform that makes financial data and services accessible to everyone
  - IEX Cloude website: https://iexcloud.io/ 
  - IEX Cloude API doc: https://iexcloud.io/docs/api/
  - Test link (to view Json data): https://sandbox.iexapis.com/stable/stock/AAPL/quote?token=Tsk_2ec682f2ca234a04bb108023943ea5e8  
-## Project Folder Structure
+## 3. Project Folder Structure
 - **FinalProject**: contains all Java source codes in this solution (created from scratch)
   - *** 
   - ***RunnableJarFiles***:
@@ -63,19 +63,21 @@
   - PowerBI: contains sample file created for this project that pulled data directly from Hive 
 - Readme.md
 
-
-## Kafka
-### Kafka Commands
+## 4. Kafka
+### 4.1 Kafka Commands
 - Create topic:
   - kafka-topics --zookeeper quickstart.cloudera:2181 --create --topic ***topicname*** --partitions 1 --replication-factor 1
 - Delete topic:
   - kafka-topics --zookeeper quickstart.cloudera:2181 --topic ***topicname*** --delete
-### Install Kafka 
+### 4.2 Install Kafka 
 - Quick guide: https://github.com/ngocbaosp/BDT/blob/master/Documentation/Install%20Kafka.pptx
 - Ref: https://blog.clairvoyantsoft.com/installing-apache-kafka-on-clouderas-quickstart-vm-8245d8d0ebe5
 
 
-## Power BI
+## 5. Hive
+
+
+## 6. Power BI
  - Download and install PowerBI Desktop: https://powerbi.microsoft.com/en-us/downloads/
 
-## Other useful references
+## 7. Other useful references
