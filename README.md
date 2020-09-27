@@ -6,7 +6,7 @@
 - **FinalProject**: contains all Java source codes in this solution (created from scratch)
   - *** 
   - ***RunnableJarFiles***:
-    - ****producer.jar****: get data from RESTAPI (https://iexcloud.io/docs/api/) and send StockInfo object to Kafka topic
+    - ****producer.jar****: get data from RESTAPI (https://iexcloud.io/docs/api/), convert Json data to Java object, and send StockInfo object to Kafka topic
     - ****stockSparkStreaming.jar****: 
      get data from Kafka topic, tranform the StockInfo object to the StockInfoDTO object (only fields related to StockDaily table in Hive) and save DStream directly to HDFS partition folder (underneath user/hive folder)   
     - ****comsumer.jar****: this is a sample consumer app, get data from Kafka topic and write to console window.
