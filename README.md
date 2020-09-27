@@ -127,7 +127,7 @@
    LINES TERMINATED BY '\n'
    LOCATION '/user/hive/BDT/StockDaily';
   ```
-- Create table partitions:
+- Create table partitions: create 3 sample partitons to stote data for Apple, Google, Microsoft stocks info.
   ```
   LOAD DATA INPATH
   '/user/cloudera/BDT/FinalProject/Stock/AAPLSampleData.txt'
@@ -144,7 +144,7 @@
   INTO TABLE stockdaily
   PARTITION (symbol='MSFT');
 
-```
+  ```
 
 ## 6. Power BI
  - Download and install PowerBI Desktop: https://powerbi.microsoft.com/en-us/downloads/
