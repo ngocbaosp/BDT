@@ -3,9 +3,9 @@
  - https://github.com/ngocbaosp/BDT/blob/master/BDT%20Final%20Project%20Presentation.pptx
  
 ## 2. Data source (Restful API): 
- - ***IEX Cloude***: a platform that makes financial data and services accessible to everyone
- - IEX Cloude website: https://iexcloud.io/ 
- - IEX Cloude API doc: https://iexcloud.io/docs/api/
+ - ***IEX Cloud***: a platform that makes financial data and services accessible to everyone
+ - IEX Cloud website: https://iexcloud.io/ 
+ - IEX Cloud API doc: https://iexcloud.io/docs/api/
  - Test link (to view Json data): https://sandbox.iexapis.com/stable/stock/AAPL/quote?token=Tsk_2ec682f2ca234a04bb108023943ea5e8  
 ## 3. Project Folder Structure
 - **[FinalProject](https://github.com/ngocbaosp/BDT/tree/master/FinalProject)**: folder contains all Java source codes in this solution (created from scratch)
