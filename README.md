@@ -8,7 +8,7 @@
  - IEX Cloude API doc: https://iexcloud.io/docs/api/
  - Test link (to view Json data): https://sandbox.iexapis.com/stable/stock/AAPL/quote?token=Tsk_2ec682f2ca234a04bb108023943ea5e8  
 ## 3. Project Folder Structure
-- **FinalProject**: contains all Java source codes in this solution (created from scratch)
+- **FinalProject** [https://github.com/ngocbaosp/BDT/tree/master/FinalProject]: contains all Java source codes in this solution (created from scratch)
   - *** 
   - ***RunnableJarFiles***:
     - ****producer.jar****: get data from RESTAPI (https://iexcloud.io/docs/api/), convert Json data to Java object, and send StockInfo object to Kafka topic
