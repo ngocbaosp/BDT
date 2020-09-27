@@ -41,7 +41,10 @@ public class StockProducer {
 	    	  ticker = args[1].toString();      
 	 	  
 	      if (args.length >=3)
-	    	  duration = Integer.parseInt(args[2].toString());	      
+	      {
+	    	  duration = Integer.parseInt(args[2].toString());	     
+	    	  duration = duration*1000;
+	      }
 
 	      if (args.length>=4)
 	    	  token = args[3].toString();      	 	  

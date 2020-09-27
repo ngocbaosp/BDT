@@ -33,17 +33,29 @@ public class StockSparkStreaming
 {
 	public static void main(String[] args) throws Exception
 	{
-		   String brokers = "quickstart.cloudera:9092";//args[0];
+		    String brokers = "quickstart.cloudera:9092";//args[0];
 		    String groupId = "console-consumer-34473";//args[1];
+		    String hdfsURL = "hdfs://quickstart.cloudera";
+		    
 		    String topics = "stocktest02";//args[2];
+		    String ticker = "APPL";
+		    String hiveFolder = "/user/hive/BDT/StockDailyTest";
+		    
+		    if (args.length>=1)
+		    	topics = args[0].toString();      
+		 	  
+		    if (args.length>=2)
+		    	ticker = args[1].toString();      
 
-		    // Create context with a 2 seconds batch interval
-		    //SparkConf sparkConf = new SparkConf().setAppName("JavaDirectKafkaWordCount").setMaster("local[2]");
+		    if (args.length>=3)
+		    	hiveFolder = args[2].toString();      
 		    
-			JavaSparkContext sparkConf = new JavaSparkContext(new SparkConf().setAppName("JavaDirectKafkaWordCount").setMaster("local[2]"));
-		    
-		    //sparkConf.
-			
+		    String hiveHDFSFolder = hdfsURL+hiveFolder+"/symbol="+ticker+"/loadTime=";
+
+		    // Create context with a 2 seconds batch interval		    
+
+			JavaSparkContext sparkConf = new JavaSparkContext(new SparkConf().setAppName("BDT-KafkaSparkStreaming").setMaster("local[2]"));
+
 		    sparkConf.hadoopConfiguration().set("mapreduce.fileoutputcommitter.marksuccessfuljobs", "false");
 		    
 		    JavaStreamingContext jssc = new JavaStreamingContext(sparkConf, Durations.seconds(10));
@@ -76,13 +88,12 @@ public class StockSparkStreaming
 		 
 		JavaPairDStream<Long,StockInfo> result = stream.mapToPair(record -> new Tuple2<>(record.key(), record.value()));
 
-		 String hdfsPath = "hdfs://quickstart.cloudera/user/hive/BDT/StockDailyTest/symbol=APPL/loadTime=";
+		 String hdfsPath = hiveHDFSFolder;
 
 		 Configuration configuration = new Configuration();
 		 configuration.set("fs.hdfs.impl", "org.apache.hadoop.hdfs.DistributedFileSystem");
-		 //configuration.set("fs.file.impl", org.apache.hadoop.fs.LocalFileSystem.class.getName());
 			    
-		 configuration.set("fs.defaultFS", "hdfs://quickstart.cloudera/user/hive/BDT/StockDailyTest");
+		 configuration.set("fs.defaultFS", hdfsURL);
 		 FileSystem fs = FileSystem.get(configuration);
 		 
 		 Timestamp ts = new Timestamp(System.currentTimeMillis());
@@ -106,9 +117,7 @@ public class StockSparkStreaming
 		// Start the computation
 		 jssc.start();
 		 jssc.awaitTermination(); 
-		
-		//result.saveAsTextFile(args[1]);
-		
+
 	
 	}
 }

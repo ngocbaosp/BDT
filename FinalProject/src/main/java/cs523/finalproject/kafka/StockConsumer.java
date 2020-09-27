@@ -24,9 +24,7 @@ public class StockConsumer {
 	         System.out.println("Enter topic name");
 	         return;
 	      }
-	      
-	      //Kafka consumer configuration settings
-	      
+
 		//String topicName = "stockKafkaTopic";
 		  String topicName = args[0].toString();
 		  
