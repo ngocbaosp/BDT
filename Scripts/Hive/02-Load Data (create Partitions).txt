@@ -1,0 +1,17 @@
+LOAD DATA INPATH
+'/user/cloudera/BDT/FinalProject/Stock/AAPLSampleData.txt'
+INTO TABLE stockdaily
+PARTITION (symbol='AAPL');
+
+
+LOAD DATA INPATH
+'/user/cloudera/BDT/FinalProject/Stock/GOOGLSampleData.txt'
+INTO TABLE stockdaily
+PARTITION (symbol='GOOGL');
+
+LOAD DATA INPATH
+'/user/cloudera/BDT/FinalProject/Stock/MSFTSampleData.txt'
+INTO TABLE stockdaily
+PARTITION (symbol='MSFT');
+
+
