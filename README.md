@@ -91,46 +91,46 @@
 ### 5.1 Kafka Commands
 - Create stockDaily table:
   ```
-  --drop table StockDaily;
-
-CREATE EXTERNAL TABLE StockDaily
-(
-    Id STRING,
-    companyName STRING,
-    primaryExchange STRING,
-    openPrice FLOAT,
-    openTime BIGINT,
-    closePrice FLOAT,
-    closeTime BIGINT,
-    highPrice FLOAT,
-    highTime BIGINT,
-    lowPrice FLOAT,
-    lowTime BIGINT,
-    latestPrice FLOAT,
-    latestUpdate BIGINT,
-    receiveDate STRING,
-    latestVolume FLOAT,
-    previousClosePrice FLOAT,
-    previousVolume FLOAT,
-    change FLOAT,
-    changePercent FLOAT,
-    volume FLOAT,
-    avgTotalVolume FLOAT,
-    marketCap FLOAT,
-    peRatio FLOAT,
-    week52High FLOAT,
-    week52Low FLOAT,
-    ytdChange FLOAT,
-    lastTradeTime BIGINT   
-)
-PARTITIONED BY (symbol STRING)
-ROW FORMAT DELIMITED
-   FIELDS TERMINATED BY ','
-LINES TERMINATED BY '\n'
-LOCATION '/user/hive/BDT/StockDaily';
+   CREATE EXTERNAL TABLE StockDaily
+   (
+       Id STRING,
+       companyName STRING,
+       primaryExchange STRING,
+       openPrice FLOAT,
+       openTime BIGINT,
+       closePrice FLOAT,
+       closeTime BIGINT,
+       highPrice FLOAT,
+       highTime BIGINT,
+       lowPrice FLOAT,
+       lowTime BIGINT,
+       latestPrice FLOAT,
+       latestUpdate BIGINT,
+       receiveDate STRING,
+       latestVolume FLOAT,
+       previousClosePrice FLOAT,
+       previousVolume FLOAT,
+       change FLOAT,
+       changePercent FLOAT,
+       volume FLOAT,
+       avgTotalVolume FLOAT,
+       marketCap FLOAT,
+       peRatio FLOAT,
+       week52High FLOAT,
+       week52Low FLOAT,
+       ytdChange FLOAT,
+       lastTradeTime BIGINT   
+   )
+   PARTITIONED BY (symbol STRING)
+   ROW FORMAT DELIMITED
+      FIELDS TERMINATED BY ','
+   LINES TERMINATED BY '\n'
+   LOCATION '/user/hive/BDT/StockDaily';
   ```
 - Delete topic:
-  ```kafka-topics --zookeeper quickstart.cloudera:2181 --topic ***topicname*** --delete```
+  ```
+  kafka-topics --zookeeper quickstart.cloudera:2181 --topic ***topicname*** --delete
+  ```
 
 
 ## 6. Power BI
