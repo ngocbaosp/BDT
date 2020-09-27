@@ -1,1 +1,1 @@
-# BDT
+# Big Data Technology Course
