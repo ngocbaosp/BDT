@@ -30,6 +30,20 @@
     
     - ****stockSparkStreaming.jar****: 
      get data from Kafka topic, tranform the StockInfo object to the StockInfoDTO object (only fields related to StockDaily table in Hive) and save DStream directly to HDFS partition folder (underneath user/hive folder)   
+      - **Shell command**:
+      ```
+      java -jar '/home/cloudera/workspace/FinalProject/RunnableJarFiles/stockSparkStreaming.jar' AAPLTest AAPL 10 /user/hive/BDT/StockDaily
+      ```
+      - **Arguments**: 
+
+
+       | No       | Arg     | Description     | Sample value     |
+       | :------------- | :----------: | -----------: | -----------: |
+       |  1 | Topic Name   | Kafka topic name    | StockTest    |
+       | 2   | Symbol | Stock ticker/symbol | AAPL: Apple Inc, GOOGL: Google Inc    |
+       | 3   | Duration | Timer Duration (seconds)| 10    |
+       | 4   | hdfs path | hdfs folder related to hive table| /user/hive/BDT/StockDaily    |
+     
     - ****comsumer.jar****: this is a sample consumer app, get data from Kafka topic and write to console window.
     
  
