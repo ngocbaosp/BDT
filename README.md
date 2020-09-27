@@ -12,15 +12,17 @@
   - *** 
   - ***RunnableJarFiles***:
     - ****producer.jar****: get data from RESTAPI (https://iexcloud.io/docs/api/), convert Json data to Java object, and send StockInfo object to Kafka topic
-     - Args 
-| No  | Param Name | Description      | Default value |
-| :-- | :---       | :---             | ---           |
-|   1 | Topic Name | Kafka topic name | Stocktest     |
-    
-| Column 1       | Column 2     | Column 3     |
-| :------------- | :----------: | -----------: |
-|  Cell Contents | More Stuff   | And Again    |
-| You Can Also   | Put Pipes In | Like this \| |
+     - Arguments 
+
+
+| No       | Arg     | Description     | Sample value     |
+| :------------- | :----------: | -----------: | -----------: |
+|  1 | Topic Name   | Kafka topic name    | StockTest    |
+| 2   | Symbol | Stock ticker/symbol | AAPL: Apple Inc, GOOGL: Google Inc    |
+| 3   | Duration | Timer Duration (seconds)| 5    |
+| 4   | token | IEX API token| Bao's token    |
+| 5   | apiURL | IEX API URL| https://sandbox.iexapis.com/stable/stock    | 
+
     
     - ****stockSparkStreaming.jar****: 
      get data from Kafka topic, tranform the StockInfo object to the StockInfoDTO object (only fields related to StockDaily table in Hive) and save DStream directly to HDFS partition folder (underneath user/hive folder)   
