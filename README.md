@@ -156,3 +156,4 @@
  - SparkStreamingKafka: https://mvnrepository.com/artifact/org.apache.spark/spark-streaming-kafka-0-10_2.12/3.0.1
 ## 8. Other useful references
 - https://spark.apache.org/docs/latest/streaming-kafka-0-10-integration.html
+- https://github.com/apache/spark/blob/v3.0.1/examples/src/main/java/org/apache/spark/examples/streaming/JavaDirectKafkaWordCount.java
