@@ -4,6 +4,10 @@
 
 ## Project Folder Structure
 - **FinalProject**: contains all Java source codes in this solution (created from scratch)
+ - *** 
+ - *** RunnableJarFiles:
+  - **** producer.jar***: get data from RESTAPI and send StockInfo object to Kafka topic
+ 
 - Documentation: contains some related documents, such as: 
  - Install Kafka.pptx: how to install Kafka on Cloudera quickstart VM  
  - Hive and PowerBI.pptx: install hive odbc connection for Power BI 
