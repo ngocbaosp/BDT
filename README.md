@@ -1,5 +1,5 @@
 # Big Data Technology Course - Final Project
-## 1. Presentation file: 
+## 1. Presentation & Demo Application: 
  ### 1.1 Presentation file
  - https://github.com/ngocbaosp/BDT/blob/master/BDT%20Final%20Project%20Presentation.pptx
  ### 1.2 Shell script file
