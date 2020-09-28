@@ -37,9 +37,9 @@ public class StockSparkStreaming
 		    String groupId = "console-consumer-34473";//args[1];
 		    String hdfsURL = "hdfs://quickstart.cloudera";
 		    
-		    String topics = "stocktest02";//args[2];
+		    String topics = "AAPLTest";//args[2];
 		    String ticker = "APPL";
-		    String hiveFolder = "/user/hive/BDT/StockDailyTest";
+		    String hiveFolder = "/user/hive/BDT/StockDaily";
 		    int duration = 30;//10 seconds by default
 			 int b = 1;
 			 
