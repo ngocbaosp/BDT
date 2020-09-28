@@ -3,67 +3,67 @@
  - https://github.com/ngocbaosp/BDT/blob/master/BDT%20Final%20Project%20Presentation.pptx
  
 ## 2. Data source (Restful API): 
- - ***IEX Cloude***: a platform that makes financial data and services accessible to everyone
- - IEX Cloude website: https://iexcloud.io/ 
- - IEX Cloude API doc: https://iexcloud.io/docs/api/
+ - ***IEX Cloud***: a platform that makes financial data and services accessible to everyone
+ - IEX Cloud website: https://iexcloud.io/ 
+ - IEX Cloud API doc: https://iexcloud.io/docs/api/
  - Test link (to view Json data): https://sandbox.iexapis.com/stable/stock/AAPL/quote?token=Tsk_2ec682f2ca234a04bb108023943ea5e8  
 ## 3. Project Folder Structure
 - **[FinalProject](https://github.com/ngocbaosp/BDT/tree/master/FinalProject)**: folder contains all Java source codes in this solution (created from scratch)
   - ***[src/main/java/cs523/finalproject/](https://github.com/ngocbaosp/BDT/tree/master/FinalProject/src/main/java/cs523/finalproject)***: folder contains java classes 
-   - **[Kafka](https://github.com/ngocbaosp/BDT/tree/master/FinalProject/src/main/java/cs523/finalproject/kafka)**: folder
-     - ***StockProducer.java***: producer class to send StockInfo object to Kafka topic    
-     - ***StockConsumer.java***: consumer class to receive StockInfo object from Kafka topic
-     - ***SendStockRecordToKafkaTopic.java***: get data from Restful API, convert Json object to Java POJO object, then send a stockInfo record to kafka topic
-     - ***Service***: folder contains related classes to get data from Rest API
-     - ***model***: folder contains POJO classes
-   - **[Spark](https://github.com/ngocbaosp/BDT/tree/master/FinalProject/src/main/java/cs523/finalproject/Spark)**: folder
-     - ***StockSparkStreaming.java***: get data from Kafka topic, tranform the StockInfo object to the StockInfoDTO object (only fields related to StockDaily table in Hive) and save DStream directly to HDFS partition folder (underneath user/hive folder)
-    
-  - ***[RunnableJarFiles](https://github.com/ngocbaosp/BDT/tree/master/FinalProject/RunnableJarFiles)***:
-    - ****producer.jar****: get data from RESTAPI (https://iexcloud.io/docs/api/), convert Json data to Java object, and send StockInfo object to Kafka topic
-      - **Shell command**:
-      ```
-      java -jar '/home/cloudera/workspace/FinalProject/RunnableJarFiles/producer.jar' AAPLTest AAPL 30
-      ```
-      - **Arguments**: 
+    - **[Kafka](https://github.com/ngocbaosp/BDT/tree/master/FinalProject/src/main/java/cs523/finalproject/kafka)**: folder
+      - ***StockProducer.java***: producer class to send StockInfo object to Kafka topic    
+      - ***StockConsumer.java***: consumer class to receive StockInfo object from Kafka topic
+      - ***SendStockRecordToKafkaTopic.java***: get data from Restful API, convert Json object to Java POJO object, then send a stockInfo record to kafka topic
+      - ***Service***: folder contains related classes to get data from Rest API
+      - ***model***: folder contains POJO classes
+    - **[Spark](https://github.com/ngocbaosp/BDT/tree/master/FinalProject/src/main/java/cs523/finalproject/Spark)**: folder
+      - ***StockSparkStreaming.java***: get data from Kafka topic, tranform the StockInfo object to the StockInfoDTO object (only fields related to StockDaily table in Hive) and save DStream directly to HDFS partition folder (underneath user/hive folder)
+
+   - ***[RunnableJarFiles](https://github.com/ngocbaosp/BDT/tree/master/FinalProject/RunnableJarFiles)***:
+     - ****producer.jar****: get data from RESTAPI (https://iexcloud.io/docs/api/), convert Json data to Java object, and send StockInfo object to Kafka topic
+       - **Shell command**:
+       ```
+       java -jar '/home/cloudera/workspace/FinalProject/RunnableJarFiles/producer.jar' AAPLTest AAPL 30
+       ```
+       - **Arguments**: 
 
 
-       | No       | Arg     | Description     | Sample value     |
-       | :------------- | :----------: | -----------: | -----------: |
-       |  1 | Topic Name   | Kafka topic name    | AAPLTest    |
-       | 2   | Symbol | Stock ticker/symbol | AAPL: Apple Inc, GOOGL: Google Inc    |
-       | 3   | Duration | Timer Duration (seconds)| 5    |
-       | 4   | token | IEX API token| Bao's token    |
-       | 5   | apiURL | IEX API URL| https://sandbox.iexapis.com/stable/stock    | 
-
-    
-    - ****stockSparkStreaming.jar****: 
-     get data from Kafka topic, tranform the StockInfo object to the StockInfoDTO object (only fields related to StockDaily table in Hive) and save DStream directly to HDFS partition folder (underneath user/hive folder)   
-      - **Shell command**:
-      ```
-      java -jar '/home/cloudera/workspace/FinalProject/RunnableJarFiles/stockSparkStreaming.jar' AAPLTest AAPL 10 /user/hive/BDT/StockDaily
-      ```
-      - **Arguments**: 
+        | No       | Arg     | Description     | Sample value     |
+        | :------------- | :----------: | -----------: | -----------: |
+        |  1 | Topic Name   | Kafka topic name    | AAPLTest    |
+        | 2   | Symbol | Stock ticker/symbol | AAPL: Apple Inc, GOOGL: Google Inc    |
+        | 3   | Duration | Timer Duration (seconds)| 5    |
+        | 4   | token | IEX API token| Bao's token    |
+        | 5   | apiURL | IEX API URL| https://sandbox.iexapis.com/stable/stock    | 
 
 
-       | No       | Arg     | Description     | Sample value     |
-       | :------------- | :----------: | -----------: | -----------: |
-       |  1 | Topic Name   | Kafka topic name    | AAPLTest    |
-       | 2   | Symbol | Stock ticker/symbol | AAPL: Apple Inc, GOOGL: Google Inc    |
-       | 3   | Duration | Timer Duration (seconds)| 10    |
-       | 4   | hdfs path | hdfs folder related to hive table| /user/hive/BDT/StockDaily    |
-     
-    - ****comsumer.jar****: this is a sample consumer app, get data from Kafka topic and write to console window.
-      - **Shell command**:
-      ```
-      java -jar '/home/cloudera/workspace/FinalProject/RunnableJarFiles/consumer.jar' AAPLTest
-      ```
-      - **Arguments**: 
+     - ****stockSparkStreaming.jar****: 
+      get data from Kafka topic, tranform the StockInfo object to the StockInfoDTO object (only fields related to StockDaily table in Hive) and save DStream directly to HDFS partition folder (underneath user/hive folder)   
+       - **Shell command**:
+       ```
+       java -jar '/home/cloudera/workspace/FinalProject/RunnableJarFiles/stockSparkStreaming.jar' AAPLTest AAPL 10 /user/hive/BDT/StockDaily
+       ```
+       - **Arguments**: 
 
 
-       | No       | Arg     | Description     | Sample value     |
-       | :------------- | :----------: | -----------: | -----------: |
-       |  1 | Topic Name   | Kafka topic name    | StockTest    |
+        | No       | Arg     | Description     | Sample value     |
+        | :------------- | :----------: | -----------: | -----------: |
+        |  1 | Topic Name   | Kafka topic name    | AAPLTest    |
+        | 2   | Symbol | Stock ticker/symbol | AAPL: Apple Inc, GOOGL: Google Inc    |
+        | 3   | Duration | Timer Duration (seconds)| 10    |
+        | 4   | hdfs path | hdfs folder related to hive table| /user/hive/BDT/StockDaily    |
+
+     - ****comsumer.jar****: this is a sample consumer app, get data from Kafka topic and write to console window.
+       - **Shell command**:
+       ```
+       java -jar '/home/cloudera/workspace/FinalProject/RunnableJarFiles/consumer.jar' AAPLTest
+       ```
+       - **Arguments**: 
+
+
+        | No       | Arg     | Description     | Sample value     |
+        | :------------- | :----------: | -----------: | -----------: |
+        |  1 | Topic Name   | Kafka topic name    | StockTest    |
     
  
 - [Documentation](https://github.com/ngocbaosp/BDT/tree/master/Documentation): contains some related documents, such as: 
@@ -153,7 +153,7 @@
 ## 6. Power BI
  - Download and install PowerBI Desktop: https://powerbi.microsoft.com/en-us/downloads/
 
-### 7. Maven Repositories (using in this project)
+## 7. Maven Repositories (using in this project)
  - Kafka Client: https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients
  - Sparkstreaming: https://mvnrepository.com/artifact/org.apache.spark/spark-streaming
  - SparkStreamingKafka: https://mvnrepository.com/artifact/org.apache.spark/spark-streaming-kafka-0-10_2.12/3.0.1
