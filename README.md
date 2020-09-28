@@ -3,7 +3,7 @@
  ### 1.1 Presentation file
  - https://github.com/ngocbaosp/BDT/blob/master/BDT%20Final%20Project%20Presentation.pptx
  ### 1.2 Shell script file
- 
+ - https://github.com/ngocbaosp/BDT/blob/master/Shell%20Script%20File/Shell%20Scripts.docx
  ### 1.3 Input and output samples
  - **Input Data**: Json data from Rest API ([view details](https://github.com/ngocbaosp/BDT/blob/master/Input-Output%20SampleData/Input/AppleSampleJsonData.json))
  ```
