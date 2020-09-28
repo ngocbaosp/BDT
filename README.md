@@ -5,7 +5,7 @@
  ### 1.2 Shell script file
  
  ### 1.3 Input and output samples
- - **Input Data**: Json data from Rest API
+ - **Input Data**: Json data from Rest API ([view details](https://github.com/ngocbaosp/BDT/blob/master/Input-Output%20SampleData/Input/AppleSampleJsonData.json))
  ```
  {
     "symbol": "AAPL",
@@ -67,7 +67,7 @@
  ```
  
  
- - **Output Data**: text file saved to HDFS from SparkStreaming
+ - **Output Data**: text file saved to HDFS from SparkStreaming ([view details](https://github.com/ngocbaosp/BDT/tree/master/Input-Output%20SampleData/Output))
  ```
  1601256512713	,Apple. Inc.,ADQANS,113.86,1673865691896, 113.68,1630975979211,113.1, 1645291304565,112.97,1660513507838, 114.08, 1678817508998,2020-09-27T18:28:42.313,154748359, 111.64, 169324969, 4.24, 0.0389,151250957,201145427,1996789480828,34.6, 138.98, 54.33,0.55724, 1680652344160,AAPL, 1678817508998
 1601256515010	,Apple. Inc.,SQDAAN,112.76,1663422810206, 116.18,1631718508194,114.06, 1601880981923,108.52,1659548237983, 113.13, 1654559432099,2020-09-27T18:28:42.318,153973635, 112.5, 174738384, 4.2, 0.0393,151216555,197632634,1993279832421,34.93, 142.88, 54.9,0.58119, 1607823054338,AAPL, 1654559432099
