@@ -1,6 +1,15 @@
 # Big Data Technology Course - Final Project
 ## 1. Presentation file: 
+ ### 1.1 Presentation file
  - https://github.com/ngocbaosp/BDT/blob/master/BDT%20Final%20Project%20Presentation.pptx
+ ### 1.2 Shell script file
+ 
+ ### 1.3 Input and output samples
+ - **Input Data**: Json data from Rest API
+ 
+ - **Output Data**: text file saved to HDFS from SparkStreaming
+ 
+ 
  
 ## 2. Data source (Restful API): 
  - ***IEX Cloud***: a platform that makes financial data and services accessible to everyone
