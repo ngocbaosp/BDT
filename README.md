@@ -1,6 +1,78 @@
 # Big Data Technology Course - Final Project
 ## 1. Presentation file: 
+ ### 1.1 Presentation file
  - https://github.com/ngocbaosp/BDT/blob/master/BDT%20Final%20Project%20Presentation.pptx
+ ### 1.2 Shell script file
+ 
+ ### 1.3 Input and output samples
+ - **Input Data**: Json data from Rest API
+ ```
+ {
+    "symbol": "AAPL",
+    "companyName": "Apple, Inc.",
+    "primaryExchange": "DSANAQ",
+    "calculationPrice": "close",
+    "open": 113.16,
+    "openTime": 1608657328800,
+    "openSource": "icilffoa",
+    "close": 114.64,
+    "closeTime": 1607378962833,
+    "closeSource": "ifioalcf",
+    "high": 115.52,
+    "highTime": 1674551301493,
+    "highSource": "iteamdd pr ul1 c5yeinee",
+    "low": 111.6,
+    "lowTime": 1674894514840,
+    "lowSource": "1ila ynudrce5ipee  dmte",
+    "latestPrice": 117.03,
+    "latestSource": "Close",
+    "latestTime": "September 25, 2020",
+    "latestUpdate": 1666447370496,
+    "latestVolume": 155142026,
+    "iexRealtimePrice": null,
+    "iexRealtimeSize": null,
+    "iexLastUpdated": null,
+    "delayedPrice": 114.43,
+    "delayedPriceTime": 1627030828981,
+    "oddLotDelayedPrice": 113.524,
+    "oddLotDelayedPriceTime": 1615316771996,
+    "extendedPrice": 116.21,
+    "extendedChange": -0.05,
+    "extendedChangePercent": -0.00045,
+    "extendedPriceTime": 1602512759793,
+    "previousClose": 109.7,
+    "previousVolume": 171248857,
+    "change": 4.14,
+    "changePercent": 0.03761,
+    "volume": 156753104,
+    "iexMarketPercent": null,
+    "iexVolume": null,
+    "avgTotalVolume": 200309306,
+    "iexBidPrice": null,
+    "iexBidSize": null,
+    "iexAskPrice": null,
+    "iexAskSize": null,
+    "iexOpen": null,
+    "iexOpenTime": null,
+    "iexClose": 117.016,
+    "iexCloseTime": 1667854864547,
+    "marketCap": 1976465397879,
+    "peRatio": 35.03,
+    "week52High": 139.7,
+    "week52Low": 53.33,
+    "ytdChange": 0.56339,
+    "lastTradeTime": 1646621093184,
+    "isUSMarketOpen": false
+}
+ ```
+ 
+ 
+ - **Output Data**: text file saved to HDFS from SparkStreaming
+ ```
+ 1601256512713	,Apple. Inc.,ADQANS,113.86,1673865691896, 113.68,1630975979211,113.1, 1645291304565,112.97,1660513507838, 114.08, 1678817508998,2020-09-27T18:28:42.313,154748359, 111.64, 169324969, 4.24, 0.0389,151250957,201145427,1996789480828,34.6, 138.98, 54.33,0.55724, 1680652344160,AAPL, 1678817508998
+1601256515010	,Apple. Inc.,SQDAAN,112.76,1663422810206, 116.18,1631718508194,114.06, 1601880981923,108.52,1659548237983, 113.13, 1654559432099,2020-09-27T18:28:42.318,153973635, 112.5, 174738384, 4.2, 0.0393,151216555,197632634,1993279832421,34.93, 142.88, 54.9,0.58119, 1607823054338,AAPL, 1654559432099
+ ```
+ 
  
 ## 2. Data source (Restful API): 
  - ***IEX Cloud***: a platform that makes financial data and services accessible to everyone
