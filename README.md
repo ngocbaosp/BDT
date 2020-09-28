@@ -5,7 +5,7 @@
  ### 1.2 Shell script file
  
  ### 1.3 Input and output samples
- - **Input Data**: Json data from Rest API
+ - **Input Data**: Json data from Rest API ([view details](https://github.com/ngocbaosp/BDT/blob/master/Input-Output%20SampleData/Input/AppleSampleJsonData.json))
  ```
  {
     "symbol": "AAPL",
